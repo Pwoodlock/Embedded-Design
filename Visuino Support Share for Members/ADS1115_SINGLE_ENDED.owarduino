@@ -1,0 +1,249 @@
+<OPEN WIRE DIAGRAM VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT Arduino>
+    <X 1296/>
+    <INSTANCE object Arduino: TArduinoBoard
+  Modules.Items = <
+    item
+      _ = TArduinoESP32WiFiModule
+    end
+    item
+      _ = TArduinoEEPROMModule
+    end
+    item
+      _ = TArduinoESP32ProcessorModule
+    end
+    item
+      _ = TArduinoESP32HallSensorModule
+    end\>
+  BoardType = 'Generic ESP32'
+  AnalogInputReference = Default
+  Serial.Items = <
+    item
+      _ = TArduinoHardwareSerial
+    end
+    item
+      _ = TArduinoESP32DefinedPinsSerial1
+    end
+    item
+      _ = TArduinoESP32DefinedPinsSerial1
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePins = (
+        __OpenWireRootUnit__.DisplayNextion1.OutputPin)
+      RXPin = 16
+      TXPin = 17
+    end\>
+  I2CChannels.Items = <
+    item
+      _ = TArduinoESP32_Generic_I2C
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePins = (
+        __OpenWireRootUnit__.ADS1115ADC1.ControlOutputPin)
+    end\>
+  SPIChannels.Items = <
+    item
+      _ = TArduinoESP32_Generic_SPI
+    end\>
+  Digital.Items = <
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalSerial1Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalSerial1Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial2Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial2Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoESP32CombinedPullDownAnalogDigitalDACChannel
+    end
+    item
+      _ = TArduinoESP32CombinedPullDownAnalogDigitalDACChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT DisplayNextion1>
+    <X 960/>
+    <INSTANCE object DisplayNextion1: TArduinoDisplayNextion
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Arduino.Serial._Item2.InputPin
+      '__OpenWireRootUnit__.Arduino.Serial[2].InputPin'))
+  Elements.Items = <
+    item
+      _ = TArduinoDisplayNextionElementNumber
+      Name = 'Number1'
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePin = __OpenWireRootUnit__.AnalogToInteger1.OutputPin
+    end\>
+end
+/>
+    <Y 384/>
+  </COMPONENT>
+  <COMPONENT ClockGenerator1>
+    <X 256/>
+    <INSTANCE object ClockGenerator1: TArduinoClockGenerator
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    __OpenWireRootUnit__.ADS1115ADC1.ClockInputPin)
+  Frequency = 5.000000000000000000
+end
+/>
+    <Y 384/>
+  </COMPONENT>
+  <COMPONENT ADS1115ADC1>
+    <X 400/>
+    <INSTANCE object ADS1115ADC1: TArduinoTexasInstrumentsADS1115
+  ClockInputPin.Form = __OpenWireRootUnit__
+  ClockInputPin.SourcePins = (
+    __OpenWireRootUnit__.ClockGenerator1.OutputPin)
+  ControlOutputPin.Form = __OpenWireRootUnit__
+  ControlOutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Arduino.I2CChannels._Item0.InputPin
+      '__OpenWireRootUnit__.Arduino.I2CChannels.I2C.InputPin'))
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    __OpenWireRootUnit__.MapRange1.InputPin)
+  Range = adsRange_4_096
+  SampleRate = 250
+  Differential = False
+end
+/>
+    <Y 384/>
+  </COMPONENT>
+  <COMPONENT AnalogToInteger1>
+    <X 816/>
+    <INSTANCE object AnalogToInteger1: TArduinoFloatToInteger
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePin = __OpenWireRootUnit__.MultiplyByValue1.OutputPin
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.DisplayNextion1.Elements._Item0.InputPin
+      '__OpenWireRootUnit__.DisplayNextion1.Elements.Number1.InputPin'))
+end
+/>
+    <Y 400/>
+  </COMPONENT>
+  <COMPONENT MapRange1>
+    <X 560/>
+    <INSTANCE object MapRange1: TArduinoMapRange
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    __OpenWireRootUnit__.MultiplyByValue1.InputPin)
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePin = __OpenWireRootUnit__.ADS1115ADC1.OutputPin
+  InputRange.Min = -0.100000001490116100
+  InputRange.Max = 0.430000007152557400
+  OutputRange.Min = -1.000000000000000000
+  OutputRange.Max = 26395.000000000000000000
+end
+/>
+    <Y 400/>
+  </COMPONENT>
+  <COMPONENT MultiplyByValue1>
+    <X 672/>
+    <INSTANCE object MultiplyByValue1: TArduinoMultiplyByValue
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    __OpenWireRootUnit__.AnalogToInteger1.InputPin)
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePin = __OpenWireRootUnit__.MapRange1.OutputPin
+  Value = 0.125000000000000000
+end
+/>
+    <Y 400/>
+  </COMPONENT>
+    <SELECTION AnalogToInteger1/>
+    <BINDINGS object TOWPinBindingManager
+end
+/>
+</UNIT>

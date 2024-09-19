@@ -1,0 +1,314 @@
+<OPEN WIRE DIAGRAM VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT Arduino>
+    <X 672/>
+    <INSTANCE object Arduino: TArduinoBoard
+  Modules.Items = <
+    item
+      _ = TArduinoESP32WiFiModule
+    end
+    item
+      _ = TArduinoEEPROMModule
+      Elements.Items = <
+        item
+          _ = TArduinoMemoryIntegerElement
+          Name = 'Integer1'
+          RememberInputPin.Form = __OpenWireRootUnit__
+          RememberInputPin.SourcePins = (
+            __OpenWireRootUnit__.Inverter1.OutputPin)
+          RecallInputPin.Form = __OpenWireRootUnit__
+          RecallInputPin.SourcePins = (
+            (
+              __OpenWireRootUnit__.MultiSource1.OutputPins._Pin0
+              '__OpenWireRootUnit__.MultiSource1.OutputPins.Pin [0]'))
+          InputPin.Form = __OpenWireRootUnit__
+          InputPin.SourcePin = __OpenWireRootUnit__.UpDownCounter1.OutputPin
+          OutputPin.Form = __OpenWireRootUnit__
+          OutputPin.SinkPins = (
+            (
+              __OpenWireRootUnit__.UpDownCounter1.Elements._0.ValueInputPin
+              '__OpenWireRootUnit__.UpDownCounter1.Elements.Set Value1.Value'))
+        end\>
+    end
+    item
+      _ = TArduinoESP32ProcessorModule
+    end
+    item
+      _ = TArduinoESP32HallSensorModule
+      Enabled = False
+    end\>
+  BoardType = 'Generic ESP32'
+  AnalogInputReference = Default
+  Serial.Items = <
+    item
+      _ = TArduinoHardwareSerial
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePins = (
+        __OpenWireRootUnit__.UpDownCounter1.OutputPin)
+    end
+    item
+      _ = TArduinoESP32DefinedPinsSerial1
+    end
+    item
+      _ = TArduinoESP32DefinedPinsSerial1
+    end\>
+  I2CChannels.Items = <
+    item
+      _ = TArduinoESP32_Generic_I2C
+    end\>
+  SPIChannels.Items = <
+    item
+      _ = TArduinoESP32_Generic_SPI
+    end\>
+  Digital.Items = <
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+      IsPullUp = True
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        __OpenWireRootUnit__.Button1.InputPin)
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalSerial1Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalSerial1Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial2Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial2Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoESP32CombinedPullDownAnalogDigitalDACChannel
+    end
+    item
+      _ = TArduinoESP32CombinedPullDownAnalogDigitalDACChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.RotaryEncoderSensor1.BInputPin
+          '__OpenWireRootUnit__.RotaryEncoderSensor1.Direction(B)'))
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.RotaryEncoderSensor1.AInputPin
+          '__OpenWireRootUnit__.RotaryEncoderSensor1.Clock(A)'))
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT RotaryEncoderSensor1>
+    <X 1040/>
+    <INSTANCE object RotaryEncoderSensor1: TArduinoRotaryEncoderSensor
+  AInputPin.Form = __OpenWireRootUnit__
+  AInputPin.SourcePin = (
+    __OpenWireRootUnit__.Arduino.Digital._Item28.OutputPin
+    '__OpenWireRootUnit__.Arduino.Digital.GPIO[ 33 ].OutputPin')
+  BInputPin.Form = __OpenWireRootUnit__
+  BInputPin.SourcePin = (
+    __OpenWireRootUnit__.Arduino.Digital._Item27.OutputPin
+    '__OpenWireRootUnit__.Arduino.Digital.GPIO[ 32 ].OutputPin')
+  UpOutputPin.Form = __OpenWireRootUnit__
+  UpOutputPin.SinkPins = (
+    __OpenWireRootUnit__.UpDownCounter1.UpInputPin)
+  DownOutputPin.Form = __OpenWireRootUnit__
+  DownOutputPin.SinkPins = (
+    __OpenWireRootUnit__.UpDownCounter1.DownInputPin)
+end
+/>
+    <Y 496/>
+  </COMPONENT>
+  <COMPONENT UpDownCounter1>
+    <X 1248/>
+    <INSTANCE object UpDownCounter1: TArduinoUpDownCounter
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Arduino.Modules._Item1.Elements._Item0.InputPin
+      
+        '__OpenWireRootUnit__.Arduino.Modules.EEPROM.Elements.Integer1.In' +
+        'putPin')
+    (
+      __OpenWireRootUnit__.Arduino.Serial._Item0.InputPin
+      '__OpenWireRootUnit__.Arduino.Serial[0].InputPin'))
+  Elements.Items = <
+    item
+      _ = TArduinoCounterSetValueElement
+      Name = 'Set Value1'
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePins = (
+        (
+          __OpenWireRootUnit__.MultiSource1.OutputPins._Pin1
+          '__OpenWireRootUnit__.MultiSource1.OutputPins.Pin [1]'))
+    end\>
+  UpInputPin.Form = __OpenWireRootUnit__
+  UpInputPin.SourcePins = (
+    __OpenWireRootUnit__.RotaryEncoderSensor1.UpOutputPin)
+  DownInputPin.Form = __OpenWireRootUnit__
+  DownInputPin.SourcePins = (
+    __OpenWireRootUnit__.RotaryEncoderSensor1.DownOutputPin)
+end
+/>
+    <Y 432/>
+  </COMPONENT>
+  <COMPONENT Button1>
+    <X 1024/>
+    <INSTANCE object Button1: TArduinoButton
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    __OpenWireRootUnit__.Inverter1.InputPin)
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePin = (
+    __OpenWireRootUnit__.Arduino.Digital._Item4.OutputPin
+    '__OpenWireRootUnit__.Arduino.Digital.GPIO[ 4 ].OutputPin')
+end
+/>
+    <Y 752/>
+  </COMPONENT>
+  <COMPONENT Inverter1>
+    <X 1152/>
+    <INSTANCE object Inverter1: TArduinoBooleanInverter
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Arduino.Modules._Item1.Elements._Item0.RememberInputPin
+      
+        '__OpenWireRootUnit__.Arduino.Modules.EEPROM.Elements.Integer1.Re' +
+        'memberInputPin'))
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePin = __OpenWireRootUnit__.Button1.OutputPin
+end
+/>
+    <Y 752/>
+  </COMPONENT>
+  <COMPONENT Start1>
+    <X 256/>
+    <INSTANCE object Start1: TArduinoStart
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    __OpenWireRootUnit__.MultiSource1.InputPin)
+end
+/>
+    <Y 320/>
+  </COMPONENT>
+  <COMPONENT MultiSource1>
+    <X 352/>
+    <INSTANCE object MultiSource1: TArduinoClockMultiSource
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePins = (
+    __OpenWireRootUnit__.Start1.OutputPin)
+  OutputPins.Form = __OpenWireRootUnit__
+  OutputPins.Pins = (
+    Sinks
+    (
+      (
+        __OpenWireRootUnit__.Arduino.Modules._Item1.Elements._Item0.RecallInputPin
+        
+          '__OpenWireRootUnit__.Arduino.Modules.EEPROM.Elements.Integer1.Re' +
+          'callInputPin'))
+    Sinks
+    (
+      (
+        __OpenWireRootUnit__.UpDownCounter1.Elements._Item0.InputPin
+        '__OpenWireRootUnit__.UpDownCounter1.Elements.Set Value1.InputPin')))
+end
+/>
+    <Y 320/>
+  </COMPONENT>
+    <SELECTION Start1/>
+    <BINDINGS object TOWPinBindingManager
+  Bindings = (
+    UpDownCounter1
+    (
+      Elements._0.Value
+      TOWIntegerSinkPinBinding
+      'Elements.Set Value1.Value'
+      (
+        __OpenWireRootUnit__.Arduino.Modules._Item1.Elements._Item0.OutputPin
+        
+          '__OpenWireRootUnit__.Arduino.Modules.EEPROM.Elements.Integer1.Ou' +
+          'tputPin')))
+end
+/>
+</UNIT>

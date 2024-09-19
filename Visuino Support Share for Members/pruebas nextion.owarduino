@@ -1,0 +1,136 @@
+<OPEN WIRE DIAGRAM VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT Arduino>
+    <X 560/>
+    <INSTANCE object Arduino: TArduinoBoard
+  Modules.Items = <
+    item
+      _ = TArduinoEEPROMModule
+    end\>
+  AnalogInputReference = Default
+  Serial.Items = <
+    item
+      _ = TArduinoHardwareSerial
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePins = (
+        __OpenWireRootUnit__.DisplayNextion1.OutputPin)
+    end\>
+  I2CChannels.Items = <
+    item
+      _ = TArduinoI2C
+    end\>
+  SPIChannels.Items = <
+    item
+      _ = TArduinoSPI
+    end\>
+  Digital.Items = <
+    item
+      _ = TArduinoAdditionalDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalInterruptChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMInterruptChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMSPI0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSPI0Channel
+      DigitalInputPin.Form = __OpenWireRootUnit__
+      DigitalInputPin.SourcePin = __OpenWireRootUnit__.TFlipFlop1.OutputPin
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalI2C0Channel
+    end\>
+end
+/>
+    <Y 272/>
+  </COMPONENT>
+  <COMPONENT DisplayNextion1>
+    <X 256/>
+    <INSTANCE object DisplayNextion1: TArduinoDisplayNextion
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Arduino.Serial._Item0.InputPin
+      '__OpenWireRootUnit__.Arduino.Serial[0].InputPin'))
+  Elements.Items = <
+    item
+      _ = TArduinoDisplayNextionElementButton
+      Name = 'Button1'
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        __OpenWireRootUnit__.TFlipFlop1.ClockInputPin)
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT TFlipFlop1>
+    <X 352/>
+    <INSTANCE object TFlipFlop1: TArduinoTFlipFlop
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Arduino.Digital._Item13.DigitalInputPin
+      
+        '__OpenWireRootUnit__.Arduino.Digital.Digital(LED)(SPI-SCK)[ 13 ]' +
+        '.DigitalInputPin'))
+  ClockInputPin.Form = __OpenWireRootUnit__
+  ClockInputPin.SourcePins = (
+    (
+      __OpenWireRootUnit__.DisplayNextion1.Elements._Item0.OutputPin
+      '__OpenWireRootUnit__.DisplayNextion1.Elements.Button1.OutputPin'))
+end
+/>
+    <Y 896/>
+  </COMPONENT>
+    <SELECTION DisplayNextion1/>
+    <BINDINGS object TOWPinBindingManager
+end
+/>
+</UNIT>

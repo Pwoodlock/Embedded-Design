@@ -1,0 +1,222 @@
+{
+  "Version": "2",
+  "Product": "Visuino Pro - Visual Arduino Programming",
+  "Units": [
+    {
+      "Name": "__OpenWireRootUnit__",
+      "*": [
+        {
+          "X": 1104,
+          "Name": "Arduino",
+          "Instance": {
+            "Serial": {
+              "*": [
+                {
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.DisplayNextion1.OutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoHardwareSerial"
+                }
+              ]
+            },
+            "+": "TArduinoBoard",
+            "AnalogInputReference": "Default",
+            "Modules": {
+              "*": [
+                {
+                  "+": "TArduinoEEPROMModule"
+                },
+                {
+                  "+": "TArduinoProcessorModule"
+                }
+              ]
+            },
+            "I2CChannels": {
+              "*": [
+                {
+                  "+": "TArduinoI2C"
+                }
+              ]
+            },
+            "Digital": {
+              "*": [
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                }
+              ]
+            },
+            "SPIChannels": {
+              "*": [
+                {
+                  "+": "TArduinoSPI"
+                }
+              ]
+            },
+            "BoardType": "Controllino MINI"
+          },
+          "Type": "Component",
+          "Y": 256
+        },
+        {
+          "X": 800,
+          "Name": "DisplayNextion1",
+          "Instance": {
+            "Elements": {
+              "*": [
+                {
+                  "Name": "Scope1",
+                  "+": "TArduinoDisplayNextionElementScope",
+                  "ElementID": 1,
+                  "Channels": {
+                    "*": [
+                      {
+                        "Name": "Channel1",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.MapRange1.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoDisplayNextionScopeChannel"
+                      }
+                    ]
+                  },
+                  "PageIndex": 0
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Serial[0].InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Serial._Item0.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoDisplayNextion"
+          },
+          "Type": "Component",
+          "Y": 272
+        },
+        {
+          "X": 416,
+          "Name": "RandomAnalogGenerator1",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.MapRange1.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoRandomAnalogGenerator"
+          },
+          "Type": "Component",
+          "Y": 304
+        },
+        {
+          "X": 256,
+          "Name": "ClockGenerator1",
+          "Instance": {
+            "Frequency": 5,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.RandomAnalogGenerator1.ClockInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoClockGenerator"
+          },
+          "Type": "Component",
+          "Y": 304
+        },
+        {
+          "X": 624,
+          "Name": "MapRange1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.DisplayNextion1.Elements.Scope1.Channels.Channel1.InputPin",
+                  "ID": "__OpenWireRootUnit__.DisplayNextion1.Elements._Item0.Channels._Item0.InputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.RandomAnalogGenerator1.OutputPin"
+              }
+            },
+            "+": "TArduinoMapRange",
+            "OutputRange": {
+              "Max": 255
+            }
+          },
+          "Type": "Component",
+          "Y": 304
+        }
+      ],
+      "Type": "Diagram",
+      "Selection": [
+        "DisplayNextion1"
+      ]
+    }
+  ],
+  "Content": "OpenWire Diagram"
+}

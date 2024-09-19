@@ -1,0 +1,263 @@
+{
+  "Version": "2",
+  "Product": "Visuino Pro - Visual Arduino Programming",
+  "Units": [
+    {
+      "Name": "__OpenWireRootUnit__",
+      "*": [
+        {
+          "X": 736,
+          "Name": "Arduino",
+          "Instance": {
+            "Serial": {
+              "*": [
+                {
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.Thermometer1.OutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoHardwareSerial"
+                },
+                {
+                  "+": "TArduinoESP32DefinedPinsSerial1"
+                },
+                {
+                  "TXPin": 17,
+                  "RXPin": 16,
+                  "+": "TArduinoESP32DefinedPinsSerial1"
+                }
+              ]
+            },
+            "+": "TArduinoBoard",
+            "AnalogInputReference": "Default",
+            "Modules": {
+              "*": [
+                {
+                  "AccessPoint": {
+                    "Config": {
+                      "IP": {
+                        "AsString": "0.0.0.0"
+                      },
+                      "Gateway": {
+                        "AsString": "0.0.0.0"
+                      },
+                      "Subnet": {
+                        "AsString": "255.255.255.0"
+                      }
+                    }
+                  },
+                  "+": "TArduinoESP32WiFiModule"
+                },
+                {
+                  "+": "TArduinoEEPROMModule"
+                },
+                {
+                  "+": "TArduinoESP32ProcessorModule"
+                },
+                {
+                  "+": "TArduinoESP32HallSensorModule"
+                }
+              ]
+            },
+            "I2CChannels": {
+              "*": [
+                {
+                  "+": "TArduinoESP32_Generic_I2C"
+                }
+              ]
+            },
+            "Digital": {
+              "*": [
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownDigitalSerial0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownDigitalSerial0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalChannel"
+                },
+                {
+                  "DigitalInputPin": {
+                    "SourcePin": {
+                      "ID": "__OpenWireRootUnit__.Thermometer1.ChipSelectOutputPin"
+                    }
+                  },
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalSerial1Channel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalSerial1Channel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownDigitalSerial2Channel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownDigitalSerial2Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownDigitalI2C0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownDigitalI2C0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoESP32CombinedPullDownAnalogDigitalDACChannel"
+                },
+                {
+                  "+": "TArduinoESP32CombinedPullDownAnalogDigitalDACChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                }
+              ]
+            },
+            "SPIChannels": {
+              "*": [
+                {
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.Thermometer1.ControlOutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoESP32_Generic_SPI"
+                }
+              ]
+            },
+            "BoardType": "Generic ESP32"
+          },
+          "Type": "Component",
+          "Y": 256
+        },
+        {
+          "X": 256,
+          "Name": "ClockGenerator1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Thermometer1.ClockInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoClockGenerator"
+          },
+          "Type": "Component",
+          "Y": 304
+        },
+        {
+          "X": 416,
+          "Name": "Thermometer1",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "ControlOutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.SPIChannels.SPI.InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.SPIChannels._Item0.InputPin"
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Serial[0].InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Serial._Item0.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoThermocoupleMAX31855",
+            "ChipSelectOutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Digital.GPIO[ 5 ].DigitalInputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Digital._Item5.DigitalInputPin"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 304
+        }
+      ],
+      "Type": "Diagram",
+      "Selection": [
+        "Thermometer1"
+      ]
+    }
+  ],
+  "Content": "OpenWire Diagram"
+}

@@ -1,0 +1,159 @@
+<OPEN WIRE DIAGRAM VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT Arduino>
+    <X 256/>
+    <INSTANCE object Arduino: TArduinoBoard
+  Modules.Items = <
+    item
+      _ = TArduinoESP32WiFiModule
+    end
+    item
+      _ = TArduinoEEPROMModule
+    end
+    item
+      _ = TArduinoESP32ProcessorModule
+    end
+    item
+      _ = TArduinoESP32HallSensorModule
+    end\>
+  BoardType = 'Generic ESP32'
+  AnalogInputReference = Default
+  Serial.Items = <
+    item
+      _ = TArduinoHardwareSerial
+    end
+    item
+      _ = TArduinoESP32DefinedPinsSerial1
+    end
+    item
+      _ = TArduinoESP32DefinedPinsSerial1
+    end\>
+  I2CChannels.Items = <
+    item
+      _ = TArduinoESP32_Generic_I2C
+    end\>
+  SPIChannels.Items = <
+    item
+      _ = TArduinoESP32_Generic_SPI
+    end\>
+  Digital.Items = <
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalSerial1Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalSerial1Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI1Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial2Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalSerial2Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedPullDownDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoESP32CombinedPullDownAnalogDigitalDACChannel
+    end
+    item
+      _ = TArduinoESP32CombinedPullDownAnalogDigitalDACChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedTouchPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedPullDownAnalogDigitalChannel
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT CustomCode1>
+    <X 464/>
+    <INSTANCE object CustomCode1: TArduinoCustomCode
+  Icludes = 'int LED = 2;'
+  OnInit = 'pinMode(led, OUTPUT);'
+  OnExecute = 
+    'digitalWrite(LED, HIGH);'#13#10'delay(2000);    '#13#10'digitalWrite(LED, LO' +
+    'W);    '#13#10'delay(1000);               '
+end
+/>
+    <Y 592/>
+  </COMPONENT>
+    <SELECTION CustomCode1/>
+    <BINDINGS object TOWPinBindingManager
+end
+/>
+</UNIT>
